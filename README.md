@@ -2,6 +2,11 @@
 
 Chatgpt project
 
+Screens:
+<img width="184" alt="image" src="https://user-images.githubusercontent.com/56916175/229291505-da9c5d67-78a3-48d3-ac02-e86d2a7d0a3b.png">
+<img width="189" alt="image" src="https://user-images.githubusercontent.com/56916175/229291520-2895c90d-d500-4811-969f-01c724d1b02b.png">
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
