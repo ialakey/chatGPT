@@ -1,5 +1,6 @@
 import 'package:chatgpt/constans/constants.dart';
 import 'package:chatgpt/services/assets_manager.dart';
+import 'package:chatgpt/services/services.dart';
 import 'package:chatgpt/widgets/chat_widget.dart';
 import 'package:chatgpt/widgets/text_widget.dart';
 import 'package:flutter/cupertino.dart';
@@ -52,16 +53,8 @@ class _ChatScreenState extends State<ChatScreen> {
         title: const Text("ChatGPT"),
         actions: [
           IconButton(
-            onPressed: () async{
-              await showModalBottomSheet(context: context, builder: (context) {
-                return Row(
-                  children: const [
-                    Flexible(child:
-                      TextWidget(label: "Choosen model:", fontSize: 16,)
-                    )
-                  ],
-                );
-              });
+            onPressed: () async {
+              await Services.showModalSheet(context: context);
             },
             icon: const Icon(Icons.more_vert_rounded), color: Colors.white),
         ],
