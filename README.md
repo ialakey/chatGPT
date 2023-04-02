@@ -1,10 +1,12 @@
-# chatgpt
+# Chatgpt
 
 Chatgpt project
 
-Screens:
-<img width="184" alt="image" src="https://user-images.githubusercontent.com/56916175/229291505-da9c5d67-78a3-48d3-ac02-e86d2a7d0a3b.png">
-<img width="189" alt="image" src="https://user-images.githubusercontent.com/56916175/229291520-2895c90d-d500-4811-969f-01c724d1b02b.png">
+### Screens:
+<img width="188" alt="image" src="https://user-images.githubusercontent.com/56916175/229345176-1307a861-1486-4bcb-b489-d50dd1362311.png"> <br/>
+<img width="188" alt="image" src="https://user-images.githubusercontent.com/56916175/229345200-a731e18b-a82d-4b32-afd6-52b5c3c0c666.png"> <br/>
+<img width="185" alt="image" src="https://user-images.githubusercontent.com/56916175/229345215-f9466063-d688-4940-840c-2e1878a3a777.png"> <br/>
+
 
 
 ## Getting Started
