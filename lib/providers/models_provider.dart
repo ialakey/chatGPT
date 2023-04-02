@@ -3,7 +3,7 @@ import 'package:chatgpt/services/api_service.dart';
 import 'package:flutter/cupertino.dart';
 
 class ModelsProvider with ChangeNotifier {
-  String currentModel = "babbage";
+  String currentModel = "gpt-3.5-turbo";
 
   String get getCurrentModel {
     return currentModel;
