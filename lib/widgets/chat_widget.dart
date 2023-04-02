@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:chatgpt/constans/constants.dart';
 import 'package:chatgpt/services/assets_manager.dart';
 import 'package:chatgpt/widgets/text_widget.dart';
@@ -56,7 +58,7 @@ class ChatWidget extends StatelessWidget {
                         displayFullTextOnTap: true,
                         totalRepeatCount: 1,
                         animatedTexts: [
-                          TyperAnimatedText(msg.trim(),),
+                          TyperAnimatedText(_translate(msg.trim()),),
                   ]),
                 ),
                       ),
@@ -86,5 +88,11 @@ class ChatWidget extends StatelessWidget {
         )
       ],
     );
+  }
+
+  String _translate(String msg) {
+    const codec = Latin1Codec(allowInvalid: false);
+    final encoded = codec.encode(msg);
+    return utf8.decode(encoded);
   }
 }
