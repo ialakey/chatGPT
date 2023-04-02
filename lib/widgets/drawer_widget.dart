@@ -94,6 +94,11 @@ class _AppDrawerState extends State<AppDrawer> {
                 onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatScreen()));},
               ),
               ListTile(
+                leading: const Icon(Icons.delete_outline),
+                title: const Text('Clear conversations', style: TextStyle(color: Colors.white)),
+                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatScreen()));},
+              ),
+              ListTile(
                 leading: const Icon(Icons.question_mark),
                 title: const Text('FAQ', style: TextStyle(color: Colors.white)),
                 onTap: () async {

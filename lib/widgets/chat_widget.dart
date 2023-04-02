@@ -58,7 +58,7 @@ class ChatWidget extends StatelessWidget {
                         displayFullTextOnTap: true,
                         totalRepeatCount: 1,
                         animatedTexts: [
-                          TyperAnimatedText(_translate(msg.trim()),),
+                          TyperAnimatedText(_encoding(msg.trim()),),
                   ]),
                 ),
                       ),
@@ -90,7 +90,7 @@ class ChatWidget extends StatelessWidget {
     );
   }
 
-  String _translate(String msg) {
+  String _encoding(String msg) {
     const codec = Latin1Codec(allowInvalid: false);
     final encoded = codec.encode(msg);
     return utf8.decode(encoded);
