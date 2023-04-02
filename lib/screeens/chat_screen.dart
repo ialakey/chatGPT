@@ -5,6 +5,7 @@ import 'package:chatgpt/providers/chats_provider.dart';
 import 'package:chatgpt/providers/models_provider.dart';
 import 'package:chatgpt/services/services.dart';
 import 'package:chatgpt/widgets/chat_widget.dart';
+import 'package:chatgpt/widgets/drawer_widget.dart';
 import 'package:chatgpt/widgets/text_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -121,6 +122,7 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
           ],
       ),),
+      drawer: AppDrawer(),
     );
   }
 

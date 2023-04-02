@@ -22,7 +22,7 @@ class Services {
               children: const [
                 Flexible(child:
                 TextWidget(
-                  label: "Chosen model:",
+                  label: "Chosen version:",
                   fontSize: 16,),
                 ),
                 Flexible(
