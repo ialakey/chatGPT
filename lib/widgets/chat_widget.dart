@@ -4,6 +4,7 @@ import 'package:chatgpt/widgets/text_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/services.dart';
 
 class ChatWidget extends StatelessWidget {
   const ChatWidget({super.key, required this.msg, required this.chatIndex});
@@ -35,22 +36,31 @@ class ChatWidget extends StatelessWidget {
                       ? TextWidget(
                       label: msg
                     )
-                      : DefaultTextStyle(
+                      : GestureDetector(
+                        onLongPress: (){
+                          Clipboard.setData(ClipboardData(text: msg.trim()));
+                          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                            content: TextWidget(label: "Copied to clipboard",),
+                            backgroundColor: Colors.black12,
+                          ));
+                        },
+                        child: DefaultTextStyle(
                     style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16
                     ),
                     child: AnimatedTextKit(
-                      isRepeatingAnimation: false,
-                      repeatForever: false,
-                      displayFullTextOnTap: true,
-                      totalRepeatCount: 1,
-                      animatedTexts: [
-                        TyperAnimatedText(msg.trim(),),
+                        isRepeatingAnimation: false,
+                        repeatForever: false,
+                        displayFullTextOnTap: true,
+                        totalRepeatCount: 1,
+                        animatedTexts: [
+                          TyperAnimatedText(msg.trim(),),
                   ]),
-                      ),
                 ),
+                      ),
+              ),
                 chatIndex == 0
                     ? const SizedBox.shrink()
                     : Row(

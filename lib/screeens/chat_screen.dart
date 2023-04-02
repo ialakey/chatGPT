@@ -53,7 +53,7 @@ class _ChatScreenState extends State<ChatScreen> {
         //   padding: const EdgeInsets.all(8.0),
         //   child: Image.asset(AssetsManager.openaiLogo),
         // ),
-        title: const Text("ChatGPT created by Alakey"),
+        title: const Text("ChatGPT"),
         actions: [
           IconButton(
             onPressed: () async {

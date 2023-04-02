@@ -1,5 +1,6 @@
 import 'package:chatgpt/screeens/chat_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../constans/constants.dart';
 
@@ -88,14 +89,29 @@ class _AppDrawerState extends State<AppDrawer> {
                 ],
               ),
               ListTile(
-                leading: const Icon(Icons.settings),
-                title: const Text('Settings', style: TextStyle(color: Colors.white)),
-                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatScreen()));},
-              ),
-              ListTile(
                 leading: const Icon(Icons.light_mode_outlined),
                 title: const Text('Light mode', style: TextStyle(color: Colors.white)),
                 onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatScreen()));},
+              ),
+              ListTile(
+                leading: const Icon(Icons.question_mark),
+                title: const Text('FAQ', style: TextStyle(color: Colors.white)),
+                onTap: () async {
+                  final uri = Uri.parse('https://help.openai.com/en');
+                  if (await canLaunchUrl(uri)) {
+                  await launchUrl(uri);
+                  }
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.person),
+                title: const Text('Developer', style: TextStyle(color: Colors.white)),
+                onTap: () async {
+                  final uri = Uri.parse('https://t.me/i_alakey');
+                  if (await canLaunchUrl(uri)) {
+                    await launchUrl(uri);
+                  }
+                },
               ),
             ],
           ),
